@@ -32,9 +32,12 @@ jobs:
         run: |
           source venv/bin/activate
           mkdocs build
+          ls
 
       - name: Rename site to test_1
-        run: mv site test_1
+        run: |
+          mv site test_1
+          ls
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
